@@ -8,7 +8,7 @@ import threading
 
 app = Flask(__name__, template_folder='src/templates', static_folder='src/static')
 # Directory where your MP3 files are stored
-music_directory = './music'
+music_directory = '/app/music'
 
 @app.route('/')
 def index():
