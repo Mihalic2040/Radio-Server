@@ -1,0 +1,23 @@
+/* Custom CSS for playlist */
+.playlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.track-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.current-track {
+    background-color: #0936c997;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.nav {
+    font-size: 34px;
+}
