@@ -8,7 +8,7 @@ import threading
 
 app = Flask(__name__, template_folder='src/templates', static_folder='src/static')
 # Directory where your MP3 files are stored
-music_directory = '/app/music'
+music_directory = 'music/'
 
 @app.route('/')
 def index():
@@ -19,9 +19,18 @@ def index():
         return render_template('index.html', music_type="dnb")
     return render_template('index.html', music_type=music_type)
 
-@app.route('/music/<filename>')
+@app.route('/music/dnb/<filename>')
 def play_music(filename):
-    return send_from_directory(music_directory, filename)
+    return send_from_directory(music_directory + "dnb/", filename)
+
+
+@app.route('/music/techno/<filename>')
+def play_techno(filename):
+    return send_from_directory(music_directory + "techno/", filename)
+
+@app.route('/music/phonk/<filename>')
+def play_phonk(filename):
+    return send_from_directory(music_directory + "phonk/", filename)
 
 
 @app.route('/create_playlist/<string:type_music>')
