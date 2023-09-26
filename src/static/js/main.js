@@ -26,16 +26,16 @@ function loadVolume() {
 }
 
 // Function to play the current track
-function playCurrentTrack() {
-    const track = playlist[currentTrackIndex];
-    if (track) {
-        audioSource.src = '/music/' + track.file;
-        audioPlayer.load();
-        audioPlayer.play();
-        currentTrack.textContent = track.name;
-        displayPlaylist()
-    }
-}
+// function playCurrentTrack() {
+//     const track = playlist[currentTrackIndex];
+//     if (track) {
+//         audioSource.src = '/music/' + track.file;
+//         audioPlayer.load();
+//         audioPlayer.play();
+//         currentTrack.textContent = track.name;
+//         displayPlaylist()
+//     }
+// }
 
 // Function to fetch and load the playlist from the server
 // function loadPlaylist() {
